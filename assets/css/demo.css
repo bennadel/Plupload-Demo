@@ -1,0 +1,39 @@
+
+div.uploader {}
+
+div.uploader div.dropzone {
+	background-color: #F0F0F0 ;
+	border: 2px solid #CCCCCC ;
+	border-radius: 3px 3px 3px 3px ;
+	height: 100px ;
+	margin: 20px 0px 20px 0px ;
+	width: 400px ;
+	}
+
+div.uploader div.dropzone div.instructions {
+	color: #999999 ;
+	font-size: 24px ;
+	line-height: 35px ;
+	padding-top: 33px ;
+	text-align: center ;
+	}
+
+div.uploader div.html5Dropzone div.flashInstructions,
+div.uploader div.flashDropzone div.html5Instructions {
+	display: none ;
+	}
+
+div.uploader div.queue {}
+
+div.uploader div.activeQueue div.noFiles,
+div.uploader div.emptyQueue ul.files {
+	display: none ;
+	}
+
+div.uploader div.queue span.name {}
+
+div.uploader div.queue span.progress {
+	color: #999999 ;
+	}
+
+div.uploader div.queue span.percentComplete {}

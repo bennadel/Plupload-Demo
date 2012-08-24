@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<title>
+		Using Plupload For Drag &amp; Drop File Uploads In ColdFusion
+	</title>
+
+	<!-- Style our demo. -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/demo.css"></link>
+
+	<!-- Load RequireJS and our bootstrap file. -->
+	<script
+		type="text/javascript"
+		src="./assets/require/require.js"
+		data-main="./assets/main.js">
+	</script>
+</head>
+<body>
+
+	<h1>
+		Using Plupload For Drag &amp; Drop File Uploads In ColdFusion
+	</h1>
+
+	<div id="">BLAM BLAM BLAM</div>
+
+	<!-- BEGIN: Uploader. -->
+	<div id="pluploadContainer" class="uploader">
+
+		<div id="pluploadDropzone" class="dropzone html5Dropzone">
+			
+			<!-- If the HTML5 upload engine is enabled, show this. -->
+			<div class="instructions html5instructions">
+				Drag &amp; Drop Your Files Here!
+			</div>
+			
+			<!-- If the Flash upload engine is enabled, show this. -->
+			<div class="instructions flashInstructions">
+				Click Here To Select Files!
+			</div>
+
+		</div>
+
+		<div class="queue emptyQueue">
+
+			<div class="noFiles">
+				You have not selected any files to upload.
+			</div>
+
+			<ul class="files">
+				<!-- To be populated dynamically. -->
+			</ul>
+
+		</div>
+
+		<!-- BEGIN: Templates For Uploader. -->
+		<script type="application/template" class="templates">
+
+			<li class="file">
+				<span class="name">FILE-NAME</span>
+				<span class="progress">
+					(<span class="percentComplete">%0</span>)
+				</span>
+			</li>
+
+		</script>
+		<!-- END: Templates For Uploader. -->
+
+	</div>
+	<!-- END: Uploader. -->
+
+</body>
+</html>
