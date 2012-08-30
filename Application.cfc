@@ -1,4 +1,5 @@
 <cfscript>
+
 component 
 	output = "false"
 	hint = "I define the application settings and event handlers."
@@ -10,12 +11,38 @@ component
 	this.applicationTimeout = createTimeSpan( 0, 0, 10, 0 );
 	this.sessionManagement = false;
 
-	// Define the root directory so we can set up mappings off of it.
-	this.rootDirectory = getDirectoryFromPath( getCurrentTemplatePath() );
 
-	// Set up the uploads directory.
-	this.uploadsDirectory = (this.rootDirectory & "uploads/");
+	// I initialize the application.
+	function onApplicationStart(){
+
+		// Get the root directory of the demo.
+		var rootDirectory = getDirectoryFromPath( getCurrentTemplatePath() );
+
+		// Set up the uploads directory.
+		application.uploadsDirectory = (rootDirectory & "uploads/");
+
+		// Return true so the application can load.
+		return( true );
+
+	}
+
+
+	// I initialize the request.
+	function onRequestStart(){
+
+		// Check to see if we need to manually reset the application.
+		if (structKeyExists( url, "init" )){
+
+			this.onApplicationStart();
+
+		}
+
+		// Return true so the page can load.
+		return( true );
+
+	}
 
 
 }
+
 </cfscript>

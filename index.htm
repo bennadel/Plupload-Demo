@@ -24,29 +24,32 @@
 		Using Plupload For Drag &amp; Drop File Uploads In ColdFusion
 	</h1>
 
-	<div id="">BLAM BLAM BLAM</div>
 
 	<!-- BEGIN: Uploader. -->
 	<div id="pluploadContainer" class="uploader">
 
-		<div id="pluploadDropzone" class="dropzone html5Dropzone">
+		<!-- BEGIN: Dropzone + Browse Button. -->
+		<a id="pluploadDropzone" class="dropzone html5Dropzone">
 			
-			<!-- If the HTML5 upload engine is enabled, show this. -->
-			<div class="instructions html5instructions">
+			<!-- If the HTML5 runtime engine is enabled, show this. -->
+			<span class="instructions html5Instructions">
 				Drag &amp; Drop Your Files Here!
-			</div>
+			</span>
 			
-			<!-- If the Flash upload engine is enabled, show this. -->
-			<div class="instructions flashInstructions">
+			<!-- If the Flash runtime engine is enabled, show this. -->
+			<span class="instructions flashInstructions">
 				Click Here To Select Files!
-			</div>
+			</span>
 
-		</div>
+		</a>
+		<!-- END: Dropzone + Browse Button. -->
 
+
+		<!-- BEGIN: File Queue. -->
 		<div class="queue emptyQueue">
 
 			<div class="noFiles">
-				You have not selected any files to upload.
+				Please select some files to upload!
 			</div>
 
 			<ul class="files">
@@ -54,6 +57,8 @@
 			</ul>
 
 		</div>
+		<!-- END: File Queue. -->
+
 
 		<!-- BEGIN: Templates For Uploader. -->
 		<script type="application/template" class="templates">
@@ -61,7 +66,10 @@
 			<li class="file">
 				<span class="name">FILE-NAME</span>
 				<span class="progress">
-					(<span class="percentComplete">%0</span>)
+					(
+						<span class="percentComplete">0%</span> of
+						<span class="totalSize">0</span>
+					)
 				</span>
 			</li>
 
@@ -70,6 +78,7 @@
 
 	</div>
 	<!-- END: Uploader. -->
+	
 
 </body>
 </html>

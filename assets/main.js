@@ -11,13 +11,17 @@ require.config({
 		}
 	},
 
-	// Set up the paths to our various modules.
+	// Set up the paths to our various modules. Be sure to include the
+	// "full" plupload file - otherwise, you'll get a -500 Init Error.
 	paths: {
 		domReady: "require/domReady",
 		jquery: "jquery/jquery-1.8.0.min",
-		plupload: "plupload/js/plupload",
+		plupload: "plupload/js/plupload.full",
 		views: "views"
-	}
+	},
+
+	// To help prevent JS caching while we're developing.
+	urlArgs: ("v=" + (new Date()).getTime())
 
 });
 

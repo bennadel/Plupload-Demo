@@ -1,26 +1,42 @@
 
-div.uploader {}
+div.uploader {
+	position: relative ;
+	}
 
-div.uploader div.dropzone {
+div.uploader a.dropzone {
 	background-color: #F0F0F0 ;
 	border: 2px solid #CCCCCC ;
 	border-radius: 3px 3px 3px 3px ;
+	cursor: pointer ;
+	display: block ;
 	height: 100px ;
 	margin: 20px 0px 20px 0px ;
+	position: relative ;
 	width: 400px ;
 	}
 
-div.uploader div.dropzone div.instructions {
+div.uploader a.dropzone span.instructions {
 	color: #999999 ;
+	display: block ;
 	font-size: 24px ;
-	line-height: 35px ;
+	line-height: 34px ;
 	padding-top: 33px ;
 	text-align: center ;
 	}
 
-div.uploader div.html5Dropzone div.flashInstructions,
-div.uploader div.flashDropzone div.html5Instructions {
+div.uploader a.html5Dropzone span.flashInstructions,
+div.uploader a.flashDropzone span.html5Instructions {
 	display: none ;
+	}
+
+div.uploader a.hotDropzone {
+	background-color: #DBEEFF ;
+	border-color: #3399FF ;
+	border-style: dashed ;
+	}
+
+div.uploader a.hotDropzone span.instructions {
+	color: #3399FF ;
 	}
 
 div.uploader div.queue {}
